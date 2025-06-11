@@ -1,129 +1,155 @@
-body {
+/* Global Styles */
+* {
   margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background-color: #f4f6fa;
-  color: #333;
-  line-height: 1.6;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
+body {
+  background: linear-gradient(to right, #f4f9fd, #dff1ff);
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Header */
 header {
-  background: #4a90e2;
-  color: white;
   text-align: center;
-  padding: 2rem;
+  padding: 30px 0;
 }
 
 .profile-pic {
-  width: 110px;
-  height: 110px;
-  object-fit: cover;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  border: 3px solid white;
-  margin-bottom: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  object-fit: cover;
+  border: 4px solid #0077cc;
+  margin-bottom: 15px;
 }
 
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+  color: #0077cc;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Sections */
 section {
-  padding: 2rem 10%;
-  max-width: 1000px;
-  margin: auto;
+  background: #fff;
+  margin: 20px auto;
+  padding: 25px;
+  max-width: 900px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-h2 {
-  color: #4a90e2;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 0.3rem;
-  margin-bottom: 1.5rem;
+/* Section Headings with Different Colors */
+.about h2 {
+  color: #0077cc;
 }
 
-.skills ul {
-  list-style: none;
-  padding-left: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 1rem;
+.skills h2 {
+  color: #008080;
 }
 
-.skills li {
-  background: #e2ebf9;
-  padding: 0.7rem;
-  border-radius: 5px;
-  text-align: center;
-  transition: 0.3s ease;
+.projects h2 {
+  color: #ff6600;
 }
 
-.skills li:hover {
-  background: #d2ddf4;
+.hobbies h2 {
+  color: #aa00ff;
 }
 
-.projects .project {
-  background: #ffffff;
-  margin-bottom: 1.2rem;
-  padding: 1rem;
-  border-left: 5px solid #4a90e2;
-  border-radius: 6px;
-  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+.education h2 {
+  color: #cc0000;
 }
 
+.contact h2 {
+  color: #228b22;
+}
+
+/* Lists */
+.skills ul,
 .hobbies ul {
-  list-style: square inside;
-  padding-left: 0;
-  font-size: 1.05rem;
-  color: #444;
-  margin-top: -0.5rem;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
+.skills li,
 .hobbies li {
-  margin-bottom: 0.5rem;
+  background: #eaf6ff;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: 500;
+  color: #0077cc;
 }
 
-.education .edu-entry {
+/* Projects */
+.project {
+  margin-bottom: 20px;
+}
+
+.project h3 {
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.project p {
+  color: #555;
+}
+
+/* Education Section */
+.edu-entry {
   display: flex;
   align-items: center;
-  background: #fff;
-  padding: 1rem;
-  margin-bottom: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  gap: 15px;
 }
 
 .edu-img {
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
   object-fit: cover;
-  border-radius: 6px;
-  margin-right: 1rem;
+  border: 2px solid #0077cc;
 }
 
 .edu-text h3 {
-  margin: 0.3rem 0;
+  margin: 0;
+  font-size: 1.2rem;
+  color: #222;
 }
 
+.edu-text p {
+  margin: 2px 0;
+  color: #444;
+}
+
+/* Contact */
 .contact a {
-  color: #4a90e2;
+  color: #0077cc;
   text-decoration: none;
+  font-weight: 500;
 }
 
 .contact a:hover {
   text-decoration: underline;
 }
 
+/* Footer */
 footer {
   text-align: center;
-  background: #4a90e2;
-  color: white;
-  padding: 1rem;
-  margin-top: 3rem;
+  padding: 15px;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 40px;
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  .education .edu-entry {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .edu-img {
-    margin: 0 0 1rem 0;
-  }
-}
